@@ -27,6 +27,7 @@ export const sendEmail = async ({
       provider: resend({ token: config.env.resendToken }),
     },
     body: {
+      // Need to get premium email from domain, and renew domain name (cannot subdomain)
       from: "Vincent <hello.vincentkon.tech>",
       to: [email],
       subject,
